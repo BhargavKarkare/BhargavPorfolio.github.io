@@ -25,7 +25,7 @@
 						<div class="content">
 							<div class="inner">
 								<h1>Bhargav Karkare</h1>
-								<p>Welcome to my portfolio.Here I showcase my skills and proficiency in data science and analysis tools like Machine learning, Power BI, Tableau, Python. With a focus on real-world datasets,I create informative visualizations to communicate insights. Browse through my projects to see my skills in action. <a href="https://medium.com/@karkare.bhargav8">@BhargavMediumBlog</a>
+								<p>Experienced DevOps Engineer proficient in Git, Docker, Kubernetes, Jenkins, Terraform, AWS, Azure, Grafana, and Prometheus. Skilled in improving development processes, optimizing infrastructure, and enhancing deployment efficiency. Successfully implemented reliable CI/CD pipelines and automated deployment workflows to speed up software delivery. Experienced with cloud platforms and monitoring tools, ensuring reliability, scalability, and performance of systems. Committed to learning and keeping up with new technologies. Seeking to use DevOps expertise to contribute to dynamic teams and drive organizational success.<a href="https://www.linkedin.com/in/bhargavkarkare/">Linkedin </a>
 							</div>
 						</div>
 						<nav>
@@ -46,43 +46,29 @@
 							<article id="intro">
 								<h2 class="major">Intro</h2>
 								<span class="image main"><img src="images/Pic001.jpg" alt=""/></span>
-								<p> Greetings, my name is Bhargav Karkare, and I am from Nagpur, Maharashtra. I am a graduate of Mechanical Engineering from Nagpur University, and have since garnered professional experience as a mechanical design engineer. However, in my search for new and exciting career opportunities, I was drawn to the fascinating field of data science and analysis. Through my explorations, I have discovered the immense potential of data and its capacity to drive innovation and decision-making. </p></p>
-								<p>As a graduate in mechanical engineering, I have always been passionate about applying scientific principles to solve complex problems. However, as I explored different industries, I realized that data analysis and the ability to draw insights from large datasets are increasingly important skills in the modern workplace.</p>
-								<p>To enhance my skill set and stay competitive in today's job market, I recently completed training in data science and analysis. Through this program, I gained experience in programming languages such as Python, SQL, Power BI, Tableau as well as statistical analysis techniques and machine learning algorithms.You can check out my resume here: <a href="#resume">Resume</a>.</p>
+								<p> Greetings, my name is Bhargav Karkare, I have completed my graduation in Engineering. Currently I'm working with Hisan Labs Pvt Ltd as a devops engineer from past 3 years and During this i have implimented skills in devops tools like docker k8s jenkis terraform git and also procifient in linux and AWS. </p></p>
+								<p>I worked with version control tool git where i was responsible to manage repositories and created branches which then follows up and merges with the main branch of codebase.I worked on docker to build images using dockerfile and pushed that to docker registy also used docker compose to run multi-container docker applications. Used kubernetes to manage and deploy the containerized applications by applying varios deployment strategies to manage lifecycle of pods. Also wrote the manifest files for pods, services and deployment in yaml language.</p>
+								<p>In addition to that i configured jenkins server for automating the entire SDLC. Where i was responsible to create and manage the CI/CD pipelines to automate the process, by using different jenkins plugins and tools like maven to build an artifacts and Sonarqube for testing the code. Configured webhooks with jenkins to automate the build trigger of pipelines. Created the terraform scripts to automate the infrastructure provisioning and resources with terraform loops to automate the repeated tasks.</p></p>
+								<p> Worked with various AWS services like IAM, S3, EC2, VPC, Route53, CLoudwatch and notification services like SNS, SQS. Managed and created IAM policies and roles for users groups and resources. Moreover used s3 buckets to store logs and host static websites also replicated into cross regions and configured the lifecycle of s3 to reduce the cost. Created various virtual machines using EC2 service in AWS with autoscaling and load balancers. Configured VPC for public and private subnets with internet gateway on top of it and used vpc peering for peering connections with different vpcs and endpoints to connect with different resources.For monitoring used cloudwatch, grafana and prometheus and created alarms using cloudwatch and used notification services like SNS.</p> 
+ 								<p>Well, I am exicted to have this opportunity to bring my exeprties and skills to contirbute in your organization. Thats all about me!! Thank You.</p><a href="#resume">Resume</a>.</p>
 							</article>
 
 						<!--Work -->
 							<article id="work">
 								<h2 class="major">Work</h2>
 								<h3>Project 1</h3>
-								<h1>Predict Success of a Zomato Restaurants using Machine Learning</h1>
+								<h1>Real Estate Applicaiton</h1>
 								<a class="image main"><img src="images/pic002.jpg" alt="" /></a>
-								<p>We are predicting the various aspects of the restaurant for zomato which is an online delivery platform in India. The data we have contains the information about the restaurants in Bangalore region.</p>
-								<p> Problem Statement: The dataset contains the review of the restaurants that will help us to find out the rating for the place, so we will try to predict the ratings of the restaurants.</p>
-								<p>Business Objective: We will predict the rating based on different parameters like online order available,foods,average cost for two people etc.</p>
+								<p>The project is on the real estate domain application which works on property listings and deals for home buyers or for real estate agents. where the goal is to make real eastate investing as easy as stock investing.</p>
+								<p>The application has three layers which are frontend, backend and database, Angular is used for the front-end, Java and Springboot is used for backend and PostgreSQL is used as the database. The architecture includes 12 frontends out of which 11 micro frontends and 1 main frontend. Addtionally there are 18 backend micro services deployed on the EKS cluster. These are connected to a database i.e RDS which has PostgreSQL. All the frontends are deployed on S3 and the main frontend is exposed through Route53 DNS service and integrated with cloudfront for accelerated data transfer. Micro frontends connect to the backend through ingress and internal load balancer which is also integrated with subdomains and exposed using Api.</p>
+								<p>In the deployment we used 4 branches named as DEV, Test, UAT and Prod and also we has two extra branches named as feature and hot fix branch. The developers works on the dev branch pushing complete code to the test branch for quality checks. Approved code moved to UAT (User Accecptance Test) where end user test the application. Upon approval the code progresses to production. Feature branch is used for adding new features merging back to DEV branch which then follows the rest i.e test, UAT and Production also the HOT-FIX branch addresses the last min changes or immediate bug fiqxes, merging directly with the Prod branch. </p>
+								<p>The deployment process utilizes various devops tools such as Git for code storage and Jenkins to create multiple CI\CD pipelines and Docker, Kubernetes for micoservice management and deployment. Terraform for provisioning of resources and grafana and prometheus are used for monitoring.</p>
+								<p>Two CI\CD pipelines were created one for infrastructure deployment and other for application deployment. The infrastructure pipeline are having 3 stages i.e. pull, test and deploy, where the code gets pulled from git undergoes terraform plan to test the code and after the approval the infrastructure gets deployed through terraform apply. Changes in terraform script trigger the pipeline automatically with webhooks.</p>
+								<p>The application pipeline has 5 stages which are pull, build, test, docker build and deploy the code gets pulled from gitlab with the help of webhooks and build the artifact with the help of maven then tested by using Sonarqube and once it passed the quality gate, Docker image is built using jenkis docker plugin and the application is deployed on the EKS cluster, ensuring the robust and scalable management of microservice. </p>
 								<ul class="action special"> 
-									<a href="https://github.com/BhargavKarkare/Predict-Success-of-a-Zomato-Restaurant-using-Machine-Learning" class="button large">View Project</a>
+									<a href="https://www.inbestments.com/app/" class="button large">View Project</a>
 								</ul>
 							</article>
-
-							<article id="work">
-								<h3 class="major">Project 2</h3>
-								<h1>Hotel Operations Insights: Real-Time Analytics Dashboard</h1>
-								<a class="image main"><img src="images/pic003.jpg" alt="" /></a>
-								<p>The Hotel Data Dashboard is a Power BI project that provides hotel managers and stakeholders with real-time insights into key performance metrics and trends, enabling them to make data-driven decisions that improve the guest experience, increase revenue, and drive business growth.</p>
-								<p>The Power BI dashboard is designed to be user-friendly and interactive, with a range of filters, slicers, and visualizations that allow users to explore the data in more detail and identify key trends and insights. The dashboard provides a wealth of information on key metrics such as Average Daily Rate (ADR), Revenue per Available Room (RevPAR), Occupancy Rate Percentage, Realisation Percentage, DSRN(Daily Sellable Room Nights), and many others.	</p>
-								<p>By using this dashboard, hotel managers and stakeholders can make informed decisions to improve their hotel's performance, increase revenue, and enhance the guest experience. This repository is a valuable resource for anyone working in the hospitality industry who wants to leverage the power of data analytics to improve their business.</p>
-								<ul class="action special"> 
-									<a href="https://github.com/BhargavKarkare/Hotel-Operations-Dashboard---Power-BI-Project-For-Hospitality-Domain" class="button large">View Project</a>
-								</ul>
-								<p>
-									<ul class="action special"> 
-										<a href="https://github.com/BhargavKarkare" class="button large">More</a>
-									</ul>
-								</p>
-							</article>							
-							
-							
 
 						<!-- resume -->
 							<article id="resume">
@@ -90,22 +76,17 @@
 								<span class="image main"><img src="images/pic004.jpg" alt="" /></span>
 								<h3>Personal Information</h3>
   								<p>Name: Bhargav Karkare<br>
-    							   Email: karkarebhargav08@gmail.com<br>
+    							   Email: bhargav.karkare@outlook.com<br>
      							   Phone: +917276695298</p>
   								<h3>Summary</h3>
-  								<p>Detail-oriented and motivated data analyst/data science fresher with a strong foundation in data analysis, statistics, and
-									machine learning. Proficient in Python, SQL, and Excel for data cleaning, transformation, and visualization. Skilled in
-									problem-solving and critical thinking with the ability to derive insights from complex data sets. Seeking an entry-level
-									position in data analytics or data science to apply knowledge and skills to real-world business problems.
-									</p>
-  								<h3>Education</h3>
-  								<p>Applied Roots, Machine Learning Course, 2022<br>
-									G. H. Raisoni College of Engineering, Bachelor of Engineering, 2018</p>
+  								<p>Experienced DevOps Engineer proficient in Git, Docker, Kubernetes, Jenkins, Terraform, AWS, Azure, Grafana, and Prometheus. Skilled in improving development processes, optimizing infrastructure, and
+								   enhancing deployment efficiency. Successfully implemented reliable CI/CD pipelines and automated deployment workflows to speed up software delivery. Experienced with cloud platforms and
+								   monitoring tools, ensuring reliability, scalability, and performance of systems. Committed to learning and keeping up with new technologies. Seeking to use DevOps expertise to contribute to dynamic
+								   teams and drive organizational success. </p>
+  								<h3>Experience </h3>
+  								<p>DevOps Engineer, <br>
+									Hisan Labs Pvt Ltd., Oct-2021</p>
   								<h3> Certifications</h3>
-  								<h4>Applied Machine Learning</h4> 
-								<ul class="action special"> 
-									<a href="https://www.appliedaicourse.com/certificate/67c18f2c8c" class="button small">link</a>
-								</ul>
  								<h4>Microsoft Azure Fundamentals (AZ-900)</h4>
 								 <ul class="action special"> 
 									<a href="https://drive.google.com/file/d/1sCuMIIVDYcM60LKH8qbuahtxDqux_eAu/view?usp=share_link" class="button small">link</a>
@@ -116,11 +97,11 @@
 								</ul>
 
   								<h3>Skills</h3>
-  								<p>Data analysis, Statistics, Machine learning, Python, SQL, Excel, Data visualization, Problem-solving, Critical thinking,
-									Attention to detail, Power BI, Tableau, Apache Hadoop, Django, HTML, CSS</p>
+  								<p> Git, Docker, Kubernetes, Jenkins, Terraform, AWS, Azure, Grafana, Prometheus, Maven, Sonarqbe, Linux 
+									</p>
 									<p>Download for full and detailed resume:</p>
 									<ul class="action special"> 
-										<a href="https://drive.google.com/file/d/1yXgH_OgwL8kAR5yJmGFO0XeKb3i8poip/view?usp=share_link" class="button large">Download</a>
+										<a href="https://drive.google.com/file/d/1qSBGNAxzhUVEx0ycohQLKSwOP2Vr2gjB/view?usp=sharing" class="button large">Download</a>
 									</ul>
 							</article>
 
@@ -137,15 +118,15 @@
 							</section>
 							<section>
 								<h3>Email</h3>
-								<p><a href="#">Karkarebhargav08@gmail.com</a></p>
+								<p><a href="#">bhargav.karkare@outlook.com</a></p>
 							</section>
 							<section>
 									
 								<ul class="icons">
-									<li><a href="https://twitter.com/I_bhargavv" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://linkedin.com/in/bhargav-karkare/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-									<li><a href="https://www.instagram.com/ig_bhargavv" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://github.com/BhargavKarkare" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://twitter.com/" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://linkedin.com/in/bhargavkarkare/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+									<li><a href="https://www.instagram.com/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</article>
 
