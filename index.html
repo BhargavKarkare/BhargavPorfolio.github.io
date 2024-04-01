@@ -56,9 +56,9 @@
 						<!--Work -->
 							<article id="work">
 								<h2 class="major">Work</h2>
-								<h3>Project 1</h3>
+								<h3>Project </h3>
 								<h1>Real Estate Applicaiton</h1>
-								<a class="image main"><img src="images/pic002.jpg" alt="" /></a>
+								<a class="image main"><img src="images/Pic002.jpg" alt="" /></a>
 								<p>The project is on the real estate domain application which works on property listings and deals for home buyers or for real estate agents. where the goal is to make real eastate investing as easy as stock investing.</p>
 								<p>The application has three layers which are frontend, backend and database, Angular is used for the front-end, Java and Springboot is used for backend and PostgreSQL is used as the database. The architecture includes 12 frontends out of which 11 micro frontends and 1 main frontend. Addtionally there are 18 backend micro services deployed on the EKS cluster. These are connected to a database i.e RDS which has PostgreSQL. All the frontends are deployed on S3 and the main frontend is exposed through Route53 DNS service and integrated with cloudfront for accelerated data transfer. Micro frontends connect to the backend through ingress and internal load balancer which is also integrated with subdomains and exposed using Api.</p>
 								<p>In the deployment we used 4 branches named as DEV, Test, UAT and Prod and also we has two extra branches named as feature and hot fix branch. The developers works on the dev branch pushing complete code to the test branch for quality checks. Approved code moved to UAT (User Accecptance Test) where end user test the application. Upon approval the code progresses to production. Feature branch is used for adding new features merging back to DEV branch which then follows the rest i.e test, UAT and Production also the HOT-FIX branch addresses the last min changes or immediate bug fiqxes, merging directly with the Prod branch. </p>
